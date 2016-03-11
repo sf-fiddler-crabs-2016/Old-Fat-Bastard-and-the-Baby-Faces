@@ -36,3 +36,32 @@
   color: red;
   display: none;
 }
+
+.totals {
+  padding-top: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: -5px;
+}
+
+.answers {
+  background-color: #74835b;
+  color: yellow;
+}
+
+.index-question {
+  padding: 25px 0;
+  border-bottom: 1px solid #eaebec;
+}
+
+.author {
+  margin-right: 50px;
+}
+
+.question-title a {
+  color: #333333;
+}
+
+.question-title a:hover {
+  text-decoration: none;
+}
