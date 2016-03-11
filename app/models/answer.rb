@@ -4,6 +4,6 @@ class Answer < ActiveRecord::Base
   belongs_to :question
   belongs_to :user
 
-  def 
-
+  def test
+  end
 end
