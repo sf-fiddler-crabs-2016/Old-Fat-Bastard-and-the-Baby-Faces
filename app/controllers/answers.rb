@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Get to create answer form
 get '/questions/:question_id/answers/new' do
   @question = Question.find(params[:question_id]) 
@@ -36,5 +37,3 @@ end
 #   redirect '/questions'
 
 # end
-
-
