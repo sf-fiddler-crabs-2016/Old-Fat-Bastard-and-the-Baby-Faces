@@ -4,4 +4,8 @@ class Answer < ActiveRecord::Base
   belongs_to :question
   belongs_to :user
 
+  def answer_author
+    user = User.find(self.user_id)
+    user.user_name
+  end
 end

@@ -65,3 +65,8 @@
 .question-title a:hover {
   text-decoration: none;
 }
+
+.navbar-brand img {
+  margin-top: -5px;
+  margin-left: 15px;
+}

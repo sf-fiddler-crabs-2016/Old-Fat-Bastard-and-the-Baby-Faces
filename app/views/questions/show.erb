@@ -1,2 +1,17 @@
-<h1><%= @question.title %></h1>
-<h3><%= @question.body %></h3>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1><%= @question.title %></h1>
+      <h3><%= @question.body %></h3>
+      <% @question.comments.each do |comment| %>
+        <p><%= comment.body %></p>
+        <p class="pull-right"><%= comment.comment_author %></p>
+      <% end %>
+      <% @answers.each do |answer| %>
+        <p><%= answer.body %></p>
+        <p><%= answer.answer_author %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
