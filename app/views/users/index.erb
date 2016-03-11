@@ -1,1 +1,10 @@
-<h1>Hello World!</h1>
+<h1>Hello <%= @user.first_name %></h1>
+
+<form action='/questions/new'>
+  <input type='submit' value='Ask a Question' class='button'>
+</form>
+
+<h3><% @questions.each do |question| %>
+  <a href='/questions/<%= question.id %>'><%= question.body %></a><br><br>
+<% end %></h3>
+
