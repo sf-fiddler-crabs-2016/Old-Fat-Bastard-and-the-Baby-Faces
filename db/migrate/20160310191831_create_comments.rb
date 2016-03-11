@@ -4,9 +4,9 @@ class CreateComments < ActiveRecord::Migration
       t.string :body
       t.integer :commentable_id
       t.string :commentable_type
-      t.integer :commenter_id
+      t.integer :user_id
 
-      t.timestamps null:false
+      t.timestamps null: false
     end
   end
 end
