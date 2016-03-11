@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   # Remember to create a migration!
-  has_many :submissions, through: :submission_users
+  has_many :questions
+  has_many :answers
+  has_many :comments, {foreign_key: 'commenter_id'}
 
   validates :first_name, :last_name, :user_name, :email, :password_hash, presence: true
   validates :user_name, :email, uniqueness: true
