@@ -19,6 +19,7 @@ end
 # Get to particular question
 get '/questions/:question_id' do
   @question = Question.find(params[:question_id])
+  @answers = @questions.answers
   erb :'questions/show'
 end
 
@@ -38,7 +39,8 @@ delete '/questions/:question_id' do
   @question = Question.find(params[:question_id])
   @question.destroy
   redirect '/questions'
-
 end
+
+
 
 
