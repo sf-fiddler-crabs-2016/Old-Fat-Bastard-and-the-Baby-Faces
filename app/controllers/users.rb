@@ -1,8 +1,9 @@
 get '/users' do
   @users = User.all
-  @user = User.find_by(id:session[:user_id])
+  @user = User.find_by(id: session[:user_id])
   @questions = Question.all
-
+  @answers = Answer.all
+  @comments = Comments.all
   erb :'users/index'
 end
 
@@ -23,17 +24,18 @@ end
 
 get '/users/:id' do
   @user = User.find(params[:id])
+  @user_questions = Question.where(user_id: @user.id)
+  @user_answers = Answer.where(user_id: @user.id)
+  @user_comments = Comment.where(user_id: @user.id)
   erb :'/users/show'
 end
 
 get '/users/:id/edit' do
-  erb :'/users/edit'
+  # erb :'/users/edit'
 end
 
 put '/users/:id' do
-
 end
 
 delete '/users/:id' do
-
 end

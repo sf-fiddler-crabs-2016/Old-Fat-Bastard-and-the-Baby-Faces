@@ -22,7 +22,7 @@ var validate = function(event) {
     $('p.login-errors').show();
   } else {
     $('#sign-in-form').trigger('reset');  
-    $.post('/sessions', formData);
+    $.post('/sessions', formData, redirect);
   }
 }
 
@@ -35,3 +35,6 @@ var checkValue = function(index, element) {
   return $(element).val() != '';
 }
 
+var redirect = function(response) {
+  window.location.reload();
+}
