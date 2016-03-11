@@ -1,5 +1,8 @@
 get '/users' do
   @users = User.all
+  @user = User.find_by(id:session[:user_id])
+  @questions = Question.all
+
   erb :'users/index'
 end
 
