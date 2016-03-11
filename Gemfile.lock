@@ -23,6 +23,7 @@ GEM
     eventmachine (1.0.9.1)
     faker (1.6.3)
       i18n (~> 0.5)
+    hirb (0.7.3)
     i18n (0.7.0)
     json (1.8.3)
     minitest (5.8.4)
@@ -77,6 +78,7 @@ DEPENDENCIES
   activesupport
   bcrypt
   faker
+  hirb
   pg
   rake
   rspec
