@@ -29,9 +29,9 @@ end
 
 # Edit question form
 put '/questions/:question_id' do
-  @user = User.find(session[:user_id])
-  @user.questions.assign_attributes(params[:question])
-  erb :'/questions/edit'
+  @question = Question.find(params[:question_id])
+  @question.assign_attributes(params[:question])
+  redirect '/questions'
 end
 
 delete '/questions/:question_id' do
