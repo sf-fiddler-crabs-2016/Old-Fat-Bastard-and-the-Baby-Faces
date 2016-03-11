@@ -13,7 +13,8 @@ end
 post '/questions' do
   @user = User.find(session[:user_id])
   @user.questions.create(params[:question])
-  redirect '/'
+  @question = @user.questions.last
+  redirect "/questions/#{@question.id}"
 end
 
 # Get to particular question

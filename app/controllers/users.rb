@@ -3,7 +3,7 @@ get '/users' do
   @user = User.find_by(id: session[:user_id])
   @questions = Question.all
   @answers = Answer.all
-  @comments = Comments.all
+  @comments = Comment.all
   erb :'users/index'
 end
 
