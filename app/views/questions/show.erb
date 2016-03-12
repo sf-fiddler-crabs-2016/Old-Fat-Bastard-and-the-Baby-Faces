@@ -1,16 +1,32 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h1><%= @question.title %></h1>
-      <h3><%= @question.body %></h3>
-      <% @question.comments.each do |comment| %>
-        <p><%= comment.body %></p>
-        <p class="pull-right"><%= comment.comment_author %></p>
-      <% end %>
-      <% @answers.each do |answer| %>
-        <p><%= answer.body %></p>
-        <p><%= answer.answer_author %></p>
-      <% end %>
+      <h3><%= @question.title %></h3>
+      <p><%= @question.body %></p>
+      <div class="comments">
+        <p>Comments:</p>
+        <% @question.comments.each do |comment| %>
+          <p><%= comment.body %><span class="comment-author"><%= comment.comment_author %></span></%></p>
+          <p class="pull-right"></p>
+        <% end %>
+      </div>
+      <div class="answers">
+        <h3>Answers:</h3>
+        <% @answers.each do |answer| %>
+          <div class="answer-text">
+            <p><%= answer.body %></p>
+            <p><%= answer.answer_author %></p>
+          </div>
+          <div class="comments">
+            <p>Comments:</p>
+            <% answer.comments.each do |comment| %>
+              <p><%= comment.body %><span class="comment-author"><%= comment.comment_author %></span></%></p>
+              <p class="pull-right"></p>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+        
     </div>
   </div>
 </div>
