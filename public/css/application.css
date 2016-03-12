@@ -44,7 +44,7 @@
   margin-bottom: -5px;
 }
 
-.answers {
+.answers-index {
   background-color: #74835b;
   color: yellow;
 }
@@ -64,4 +64,30 @@
 
 .question-title a:hover {
   text-decoration: none;
+}
+
+.navbar-brand img {
+  margin-top: -5px;
+  margin-left: 15px;
+}
+
+.comments {
+  color: #939393;
+  margin-left: 50px;
+  line-height: 1em;
+}
+
+.comment-author {
+  color: #337ab7;
+  margin-left: 50px;
+}
+
+.answers {
+  border-top: 1px solid #eaebec;
+  margin-top: 30px;
+}
+
+.answer-text {
+  margin: 30px 0;
+  border-bottom: 1px solid #eaebec;
 }

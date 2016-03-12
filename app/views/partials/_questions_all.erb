@@ -5,13 +5,13 @@
         <p class="text-center totals"><%= question.vote_totals %></p>
         <p class="text-center">votes</p>
       </div>
-      <div class="col-sm-6 answers">
+      <div class="col-sm-6 answers-index">
         <p class="text-center totals"><%= question.answers.count %></p>
         <p class="text-center">answers</p>
       </div>
     </div>
     <div class="col-10 question-title">
-      <a href=<%= "/questions/#{question.id}" %>><h1><%= question.title %></h1></a>
+      <a href=<%= "/questions/#{question.id}" %>><h2><%= question.title %></h2></a>
     </div>
     <div class="col-10 pull-right author">
       <p><%= "posted by: #{question.author}" %></p>
