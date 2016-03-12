@@ -1,5 +1,7 @@
 <h1>Ask A Question!</h1>
-<form>
-  <input type='textarea'></input>
+<form action='/questions' method="POST">
+  <input type='text' name='question[title]' placeholder=' Title' ></input>
+  <br>
+  <input type='text' name='question[body]' placeholder=' Your Question'></input>
   <input type='submit' value='Ask!'></input>
 </form>
